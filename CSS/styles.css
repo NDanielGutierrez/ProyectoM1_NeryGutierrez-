@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #333;
+  text-align: left;
+  margin-top: 10px;
+}
+.arcoiris {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    rgb(196, 196, 108),
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.toggle-group {
+  display: flex;
+
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 2px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn.active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.controls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px;
+  width: 100%;
+  background: #f9f9f9;
+}
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px;
+}
+
+.color-card {
+  width: 120px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.color-preview {
+  flex: 1;
+}
+
+.color-code {
+  background: white;
+  text-align: center;
+  padding: 8px 4px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #333;
+}

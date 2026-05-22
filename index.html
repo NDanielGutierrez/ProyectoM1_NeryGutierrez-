@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" 
-        <title> Colorfly Studio - Generador de Paleta de colores </title>
-        <meta name="description" content="Geberador de paleta de colores para diseñadores gráficos y desarrolladores web. Crea combinaciones de colores personalizadas para tus proyectos de diseño.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./CSS/styles.css">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" <meta name="description"
+        content="Geberador de paleta de colores para diseñadores gráficos y desarrolladores web. Crea combinaciones de colores personalizadas para tus proyectos de diseño.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
 
-        <header>
-            <h1>Colorfly Studio</h1>
-            <p>Generador de Paleta de colores</p>
-        </header>
-        <main>
-        
-        <section class="controls">
-        <label for="palette-size">Tamaño de la paleta:</label>
-        <select id="palette-size">
-            <option value="6">6 colores</option>
-            <option value="8">8 colores</option>
-            <option value="9">9 colores</option>
-        </select>
+<body>
 
-        <button id="btn-generate">Generar paleta</button>
+    <header>
+        <div class="header-content">
+            <h1 class="arcoiris">Colorfly Studio</h1>
+            <p class="header-subtitle">Generador de Paleta de colores</p>
+    </header>
+    <main>
+
+        <section class="controls-wrapper">
+            <div class="control-group">
+                <p id="size-label">Tamaño de la paleta</p>
+                <div class="toggle-group palette-size">
+                    <button class="btn active" data-size="6">6</button>
+                    <button class="btn" data-size="8">8</button>
+                    <button class="btn" data-size="9">9</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <p>Formato de color</p>
+                <div class="toggle-group format">
+                    <button class="btn active" data-format="hex">HEX</button>
+                    <button class="btn" data-format="hsl">HSL</button>
+                </div>
+            </div>
+            <button id="btn-generate">Generar paleta</button>
         </section>
-        <section class="palette" id="palette-container">
-            
+
+
         </section>
 
-        </main>
+    </main>
 
-        <footer>
-            <p>© 2026 Colorfly Studio. Todos los derechos reservados.</p>
-        </footer>
+    <footer>
+        <p>© 2026 Colorfly Studio. Todos los derechos reservados.</p>
+    </footer>
 
-        <script src="./JS/app.js"  defer></script>
-    </body>
+    <script src="./JS/app.js" defer></script>
+</body>
+
 </html>
