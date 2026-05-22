@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" 
-        <title> Colorfly Studio - Generador de Paleta de colores </title>
-        <meta name="description" content="Geberador de paleta de colores para diseñadores gráficos y desarrolladores web. Crea combinaciones de colores personalizadas para tus proyectos de diseño.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./CSS/styles.css">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Generador de paleta de colores para diseñadores gráficos y desarrolladores web. Crea combinaciones de colores personalizadas para tus proyectos de diseño.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
 
-        <header>
-            <h1>Colorfly Studio</h1>
-            <p>Generador de Paleta de colores</p>
-        </header>
-        <main>
-        
-        <section class="controls">
-        <label for="palette-size">Tamaño de la paleta:</label>
-        <select id="palette-size">
-            <option value="6">6 colores</option>
-            <option value="8">8 colores</option>
-            <option value="9">9 colores</option>
-        </select>
+<body>
 
-        <button id="btn-generate">Generar paleta</button>
-        </section>
-        <section class="palette" id="palette-container">
+    <header>
+        <div class="header-content">
             
-        </section>
+            <h1 class="arcoiris">Colorfly Studio</h1>
+            <p class="header-subtitle">Generador de Paleta de colores</p>
+        </div>
+    </header>
+ <main>
 
-        </main>
+  <section class="controls-wrapper" aria-label="Opciones de paleta">
+
+  <div class="control-group">
+    <p class="control-label" id="size-label">Tamaño</p>
+    <div class="toggle-group palette-size" role="group" aria-labelledby="size-label">
+      <button class="btn active" data-size="6" aria-pressed="true">6</button>
+      <button class="btn" data-size="8" aria-pressed="false">8</button>
+      <button class="btn" data-size="9" aria-pressed="false">9</button>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <p class="control-label" id="format-label">Formato</p>
+    <div class="toggle-group format" role="group" aria-labelledby="format-label">
+      <button class="btn active" data-format="hex" aria-pressed="true">HEX</button>
+      <button class="btn" data-format="hsl" aria-pressed="false">HSL</button>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <p class="control-label">&nbsp;</p>
+    <button id="btn-generate" aria-label="Generar nueva paleta de colores">🎲 Generar paleta</button>
+  </div>
+
+</section>
+  </section>
+
+  <section class="palette" id="palette" aria-label="Paleta de colores generada"></section>
+
+  <section class="action-bar" aria-label="Acciones de la paleta">
+    <button id="btn-save" aria-label="Guardar paleta actual">💾 Guardar paleta</button>
+    <button id="btn-export" aria-label="Exportar paleta como PNG">📥 Exportar PNG</button>
+    <button id="btn-clear" aria-label="Limpiar historial de paletas guardadas">🗑 Limpiar historial</button>
+  </section>
+
+  <section class="history-section" id="history-section" aria-label="Historial de paletas guardadas">
+    <h2 class="history-title">Paletas guardadas</h2>
+    <div class="history-list" id="history-list"></div>
+  </section>
+
+</main>
 
         <footer>
             <p>© 2026 Colorfly Studio. Todos los derechos reservados.</p>
