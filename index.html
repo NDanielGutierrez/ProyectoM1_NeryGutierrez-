@@ -1,71 +1,87 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description"
-        content="Generador de paleta de colores para diseñadores gráficos y desarrolladores web. Crea combinaciones de colores personalizadas para tus proyectos de diseño.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./CSS/styles.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+    content="Generador de paleta de colores para diseñadores gráficos y desarrolladores web. Crea combinaciones de colores personalizadas para tus proyectos de diseño.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colorfly Studio — Generador de Paleta de Colores</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="header-content">
-            
-            <h1 class="arcoiris">Colorfly Studio</h1>
-            <p class="header-subtitle">Generador de Paleta de colores</p>
+  <header>
+    <div class="header-content">
+      <h1 class="arcoiris">Colorfly Studio</h1>
+
+      <p class="header-subtitle" role="doc-subtitle">Generador de Paleta de colores</p>
+    </div>
+  </header>
+
+  <main>
+
+
+    <form class="controls-wrapper" aria-label="Opciones de paleta" id="palette-controls">
+
+      <fieldset class="control-group">
+
+        <legend class="control-label">Tamaño</legend>
+        <div class="toggle-group palette-size" role="group">
+          <button type="button" class="btn active" data-size="6" aria-pressed="true">6</button>
+          <button type="button" class="btn" data-size="8" aria-pressed="false">8</button>
+          <button type="button" class="btn" data-size="9" aria-pressed="false">9</button>
         </div>
-    </header>
- <main>
+      </fieldset>
 
-  <section class="controls-wrapper" aria-label="Opciones de paleta">
+      <fieldset class="control-group">
+        <legend class="control-label">Formato</legend>
+        <div class="toggle-group format" role="group">
+          <button type="button" class="btn active" data-format="hex" aria-pressed="true">HEX</button>
+          <button type="button" class="btn" data-format="hsl" aria-pressed="false">HSL</button>
+        </div>
+      </fieldset>
 
-  <div class="control-group">
-    <p class="control-label" id="size-label">Tamaño</p>
-    <div class="toggle-group palette-size" role="group" aria-labelledby="size-label">
-      <button class="btn active" data-size="6" aria-pressed="true">6</button>
-      <button class="btn" data-size="8" aria-pressed="false">8</button>
-      <button class="btn" data-size="9" aria-pressed="false">9</button>
+      <div class="control-group">
+
+        <button type="button" id="btn-generate" aria-label="Generar nueva paleta de colores">
+          🎲 Generar paleta
+        </button>
+      </div>
+
+    </form>
+
+    <output class="palette" id="palette" aria-label="Paleta de colores generada" aria-live="polite"></output>
+
+    <div class="action-bar" role="toolbar" aria-label="Acciones de la paleta">
+      <button type="button" id="btn-save" aria-label="Guardar paleta actual">💾 Guardar paleta</button>
+      <button type="button" id="btn-export" aria-label="Exportar paleta como PNG">📥 Exportar PNG</button>
+      <button type="button" id="btn-clear" aria-label="Limpiar historial de paletas guardadas">🗑 Limpiar
+        historial</button>
     </div>
-  </div>
 
-  <div class="control-group">
-    <p class="control-label" id="format-label">Formato</p>
-    <div class="toggle-group format" role="group" aria-labelledby="format-label">
-      <button class="btn active" data-format="hex" aria-pressed="true">HEX</button>
-      <button class="btn" data-format="hsl" aria-pressed="false">HSL</button>
-    </div>
-  </div>
 
-  <div class="control-group">
-    <p class="control-label">&nbsp;</p>
-    <button id="btn-generate" aria-label="Generar nueva paleta de colores">🎲 Generar paleta</button>
-  </div>
 
-</section>
-  </section>
+        <aside class="history-section" id="history-section" aria-label="Historial de paletas guardadas">
+            <h2 class="history-title">Paletas guardadas</h2>
+                  <ol class="history-list" id="history-list" reversed></ol>
+        </aside>
 
-  <section class="palette" id="palette" aria-label="Paleta de colores generada"></section>
+  </main>
 
-  <section class="action-bar" aria-label="Acciones de la paleta">
-    <button id="btn-save" aria-label="Guardar paleta actual">💾 Guardar paleta</button>
-    <button id="btn-export" aria-label="Exportar paleta como PNG">📥 Exportar PNG</button>
-    <button id="btn-clear" aria-label="Limpiar historial de paletas guardadas">🗑 Limpiar historial</button>
-  </section>
 
-  <section class="history-section" id="history-section" aria-label="Historial de paletas guardadas">
-    <h2 class="history-title">Paletas guardadas</h2>
-    <div class="history-list" id="history-list"></div>
-  </section>
+  <footer>
+    <p>
+      <small>© 2026 Colorfly Studio. Todos los derechos reservados.</small>
+    </p>
+  </footer>
 
-</main>
+  <output class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></output>
+  <canvas id="export-canvas" hidden></canvas>
 
-        <footer>
-            <p>© 2026 Colorfly Studio. Todos los derechos reservados.</p>
-        </footer>
+  <script src="./JS/app.js" defer></script>
+</body>
 
-        <script src="./JS/app.js"  defer></script>
-    </body>
 </html>

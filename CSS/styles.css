@@ -67,6 +67,7 @@ h1.arcoiris {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.1;
+  padding-bottom: 10px;
 }
 
 .header-subtitle {
@@ -101,7 +102,11 @@ main {
   margin-bottom: 24px;
 }
 
-
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
 
 .control-label {
   font-size: 0.72rem;
