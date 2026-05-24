@@ -260,7 +260,7 @@ function renderizarHistorial() {
 
   savedPalettes.forEach((paleta, index) => {
     
-    const item = document.createElement("div");
+    const item = document.createElement("li");
     item.className = "history-item";
 
     
