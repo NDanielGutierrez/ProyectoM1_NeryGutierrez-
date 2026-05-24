@@ -8,17 +8,17 @@
 }
 
 :root {
-  --bg:          #f5e5cc;       /* fondo general cálido */
-  --surface:     #ffffff;       /* tarjetas y controles */
-  --border:      #e0dbd2;       /* bordes suaves */
-  --text:        #1a1a1a;       /* texto principal */
-  --text-muted:  #888880;       /* texto secundario */
-  --accent:      #1a1a1a;       /* color de énfasis (botones activos) */
-  --accent-text: #ffffff;       /* texto sobre acento */
+  --bg:          #fdf0e0;       /* fondo crema cálido */
+  --surface:     #fff8f0;       /* tarjetas y controles */
+  --border:      #f0d5b0;       /* bordes naranja suave */
+  --text:        #3d2000;       /* texto marrón oscuro */
+  --text-muted:  #b87040;       /* texto secundario naranja */
+  --accent:      #ff7a1a;       /* botones activos — naranja zorro */
+  --accent-text: #ffffff;
   --radius-sm:   8px;
   --radius-md:   12px;
   --radius-lg:   18px;
-  --shadow:      0 2px 12px rgba(0,0,0,0.08);
+  --shadow:      0 2px 12px rgba(255, 120, 30, 0.12);
   --font-main:   'DM Sans', sans-serif;
   --font-mono:   'DM Mono', monospace;
   --font-logo:   'Lobster', cursive;
