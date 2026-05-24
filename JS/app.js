@@ -318,9 +318,9 @@ function guardarPaleta() {
     console.warn("⚠️ No hay colores para guardar");
     mostrarToast("⚠️ Primero genera una paleta");
     return;
-    console.log("Guardando:", currentColors);
   }
-
+ console.log("Guardando:", currentColors);
+ 
   const nuevaPaleta = {
     colors: currentColors.map((c) => c.hex), 
     timestamp: Date.now()                     

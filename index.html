@@ -24,41 +24,41 @@
   <main>
 
 
-    <form class="controls-wrapper" aria-label="Opciones de paleta" id="palette-controls">
+    <section class="controls-wrapper" aria-label="Opciones de paleta" id="palette-controls">
 
       <fieldset class="control-group">
 
         <legend class="control-label">Tamaño</legend>
         <div class="toggle-group palette-size" role="group">
-          <button type="button" class="btn active" data-size="6" aria-pressed="true">6</button>
-          <button type="button" class="btn" data-size="8" aria-pressed="false">8</button>
-          <button type="button" class="btn" data-size="9" aria-pressed="false">9</button>
+          <button  class="btn active" data-size="6" aria-pressed="true">6</button>
+          <button  class="btn" data-size="8" aria-pressed="false">8</button>
+          <button  class="btn" data-size="9" aria-pressed="false">9</button>
         </div>
       </fieldset>
 
       <fieldset class="control-group">
         <legend class="control-label">Formato</legend>
         <div class="toggle-group format" role="group">
-          <button type="button" class="btn active" data-format="hex" aria-pressed="true">HEX</button>
-          <button type="button" class="btn" data-format="hsl" aria-pressed="false">HSL</button>
+          <button  class="btn active" data-format="hex" aria-pressed="true">HEX</button>
+          <button  class="btn" data-format="hsl" aria-pressed="false">HSL</button>
         </div>
       </fieldset>
 
       <div class="control-group">
         <p class="control-label">&nbsp;</p>
-        <button type="button" id="btn-generate" aria-label="Generar nueva paleta de colores">
+        <button  id="btn-generate" aria-label="Generar nueva paleta de colores">
           🎲 Generar paleta
         </button>
       </div>
 
-    </form>
+    </section>
 
     <output class="palette" id="palette" aria-label="Paleta de colores generada" aria-live="polite"></output>
 
     <div class="action-bar" role="toolbar" aria-label="Acciones de la paleta">
-      <button type="button" id="btn-save" aria-label="Guardar paleta actual">💾 Guardar paleta</button>
-      <button type="button" id="btn-export" aria-label="Exportar paleta como PNG">📥 Exportar PNG</button>
-      <button type="button" id="btn-clear" aria-label="Limpiar historial de paletas guardadas">🗑 Limpiar
+      <button  id="btn-save" aria-label="Guardar paleta actual">💾 Guardar paleta</button>
+      <button  id="btn-export" aria-label="Exportar paleta como PNG">📥 Exportar PNG</button>
+      <button  id="btn-clear" aria-label="Limpiar historial de paletas guardadas">🗑 Limpiar
         historial</button>
     </div>
 
