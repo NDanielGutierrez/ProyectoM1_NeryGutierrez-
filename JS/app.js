@@ -155,6 +155,14 @@ function renderizarPaleta() {
     card.className = "color-card" + (estaBlockeado ? " locked" : "");
     card.setAttribute("aria-label", `Color ${index + 1}: ${codigoPrincipal}`);
     
+    const direcciones = [
+  "translateX(-200px) rotate(-15deg)",
+  "translateX(200px) rotate(15deg)",
+  "translateY(-200px) rotate(10deg)",
+  "translateY(200px) rotate(-10deg)",
+];
+const dir = direcciones[index % direcciones.length];
+card.style.setProperty("--from-transform", dir);
 
 
     card.style.animationDelay = (index * 40) + "ms";
