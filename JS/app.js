@@ -155,6 +155,8 @@ function renderizarPaleta() {
     card.className = "color-card" + (estaBlockeado ? " locked" : "");
     card.setAttribute("aria-label", `Color ${index + 1}: ${codigoPrincipal}`);
     
+
+
     card.style.animationDelay = (index * 40) + "ms";
 
     
