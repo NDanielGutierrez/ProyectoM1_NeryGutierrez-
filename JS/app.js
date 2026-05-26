@@ -181,13 +181,18 @@ card.style.setProperty("--from-transform", dir);
 
     
     lockBtn.addEventListener("click", (evento) => {
-      evento.stopPropagation(); 
-      lockedColors[index] = !lockedColors[index];
-      console.log(`🔐 Color ${index} ${lockedColors[index] ? "bloqueado" : "desbloqueado"}`);
-      mostrarToast(lockedColors[index] ? "🔒 Color bloqueado" : "🔓 Color desbloqueado");
-      renderizarPaleta(); 
-    });
+  evento.stopPropagation();
+  lockedColors[index] = !lockedColors[index];
+  const bloqueado = lockedColors[index];
 
+
+  lockBtn.textContent = bloqueado ? "🔒" : "🔓";
+  lockBtn.setAttribute("aria-pressed", bloqueado ? "true" : "false");
+  lockBtn.setAttribute("aria-label", bloqueado ? "Desbloquear color" : "Bloquear color");
+  card.classList.toggle("locked", bloqueado);
+
+  mostrarToast(bloqueado ? "🔒 Color bloqueado" : "🔓 Color desbloqueado");
+    });
     
     const info = document.createElement("div");
     info.className = "color-info";
@@ -197,6 +202,7 @@ card.style.setProperty("--from-transform", dir);
     btnCodigo1.className = "color-code-btn";
     btnCodigo1.textContent = codigoPrincipal;
     btnCodigo1.setAttribute("aria-label", `Copiar ${codigoPrincipal}`);
+    btnCodigo1.setAttribute("title", "Copiar");
     btnCodigo1.addEventListener("click", () => copiarAlPortapapeles(codigoPrincipal));
 
     
@@ -204,6 +210,7 @@ card.style.setProperty("--from-transform", dir);
     btnCodigo2.className = "color-code-btn";
     btnCodigo2.textContent = codigoSecundario;
     btnCodigo2.setAttribute("aria-label", `Copiar ${codigoSecundario}`);
+    btnCodigo2.setAttribute("title", "Copiar");
     btnCodigo2.addEventListener("click", () => copiarAlPortapapeles(codigoSecundario));
 
     
@@ -244,7 +251,7 @@ function generarPaleta() {
 
   
   Object.keys(lockedColors).forEach((key) => {
-    if (parseInt(key) >= currentSize) {
+    if (parseInt(key) >= currentSize) {         
       delete lockedColors[key];
     }
   });
@@ -470,8 +477,7 @@ btnClear.addEventListener("click", () => {
 
 
 setupToggle(".palette-size", "size", (valor) => {
-  currentSize = parseInt(valor); 
-  lockedColors = {};             
+  currentSize = parseInt(valor);              
   console.log("Nuevo tamaño:", currentSize);
   generarPaleta();               
 });

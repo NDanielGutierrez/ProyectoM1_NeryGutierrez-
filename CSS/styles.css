@@ -67,7 +67,7 @@ header {
 
 h1.arcoiris {
   font-family: var(--font-logo);
-  font-size: clamp(1.6rem, 4vw, 2.4rem); /* tamaño responsivo */
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   background: linear-gradient(to right, #e63946, #f4a261, #e9c46a, #2a9d8f, #457b9d, #6a4c93);
   background-clip: text;
   -webkit-background-clip: text;
@@ -279,7 +279,7 @@ fieldset {
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 32px;
-  padding: 0 16px;
+  padding: 0 0 16px;
 }
 
 .action-bar button {
@@ -381,7 +381,7 @@ fieldset {
   font-size: 0.85rem;
   font-weight: 500;
   font-family: var(--font-main);
-  pointer-events: none;   /* no bloquea clics */
+  pointer-events: none;  
   opacity: 0;
   transition: opacity 0.25s, transform 0.25s;
   z-index: 1000;
