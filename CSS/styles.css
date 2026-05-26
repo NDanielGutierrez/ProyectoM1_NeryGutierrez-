@@ -307,7 +307,7 @@ fieldset {
   border-top: 1px solid var(--border);
   max-width: 1100px;
   margin: 0 auto;
-  padding: 24px 16px 0;
+  padding: 0 0 16px;
 }
 
 .history-title {
